@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - WoofsAndWhiskers</title>
+  <link rel="stylesheet" href="/css/WAWStylesheet.css">
+  <script src="/js/WAWscript.js" defer></script>
+  <script>
+    function validateForm() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const usernameRegex = /^[a-zA-Z0-9]+$/;
+      const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/;
+
+      if (!usernameRegex.test(username)) {
+        alert('Username can only contain letters and digits.');
+        return false;
+      }
+
+      if (!passwordRegex.test(password)) {
+        alert('Password must be at least 4 characters long and contain at least one letter and one digit.');
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <%- include('partials/header', { title: 'Register - Your Website Name' }) %>
+  </header>
+
+  <div class="registerbody">
+  <nav class="navbar">
+    <ul class="navelements">
+      <li><a href="/">Home</a></li>
+      <li><a href="/browsepets">Browse Available Pets</a></li>
+      <li><a href="/find">Find a Dog/Cat</a></li>
+      <li><a href="/dogcare">Dog Care</a></li>
+      <li><a href="/catcare">Cat Care</a></li>
+      <li><a href="/petstogiveaway">Have a Pet to Give Away</a></li>
+      <li><a href="/contactus">Contact Us</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a class="active" href="/register">Register</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <p class="contentHeader">Registration Page</p>
+    <% if (locals.errorMessage) { %>
+      <p style="color: red;"><%= locals.errorMessage %></p>
+    <% } %>
+    <% if (locals.successMessage) { %>
+      <p style="color: green;"><%= locals.successMessage %></p>
+    <% } %>
+    <form action="/register" method="post" onsubmit="return validateForm()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
+
+  <footer class="footer">
+    <%- include('partials/footer') %>
+  </footer>
+</body>
+</html>

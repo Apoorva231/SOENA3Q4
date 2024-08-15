@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - WoofsAndWhiskers</title>
+  <link rel="stylesheet" href="/css/WAWStylesheet.css">
+  <script src="/js/WAWscript.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <%- include('partials/header', { title: 'Login - Your Website Name' }) %>
+  </header>
+
+<div class="loginbody">
+  <nav class="navbar">
+    <ul class="navelements">
+      <li><a href="/">Home</a></li>
+      <li><a href="/browsepets">Browse Available Pets</a></li>
+      <li><a href="/find">Find a Dog/Cat</a></li>
+      <li><a href="/dogcare">Dog Care</a></li>
+      <li><a href="/catcare">Cat Care</a></li>
+      <li><a href="/petstogiveaway">Have a Pet to Give Away</a></li>
+      <li><a href="/contactus">Contact Us</a></li>
+      <li><a class="active" href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <p class="contentHeader">Login Page</p>
+    <% if (locals.errorMessage) { %>
+      <p style="color: red;"><%= locals.errorMessage %></p>
+    <% } %>
+    <form action="/login" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+  <footer class="footer">
+    <%- include('partials/footer') %>
+  </footer>
+</body>
+</html>

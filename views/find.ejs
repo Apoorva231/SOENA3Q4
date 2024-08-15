@@ -1,0 +1,75 @@
+<%- include('partials/header', { title: 'Find a Dog/Cat' }) %>
+
+<div class="bodyfind">
+  <nav class="navbar">
+    <ul class="navelements">
+      <li><a href="/">Home</a></li>
+      <li><a href="/browsepets">Browse Available Pets</a></li>
+      <li><a href="/find">Find a Dog/Cat</a></li>
+      <li><a href="/dogcare">Dog Care</a></li>
+      <li><a href="/catcare">Cat Care</a></li>
+      <li><a href="/petstogiveaway">Have a Pet to Give Away</a></li>
+      <li><a href="/contactus">Contact Us</a></li>
+      <li><a class="active" href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <form method="POST" class="findform" id="findform" onsubmit="validateForm(event)">
+    <fieldset id="f1">
+      <legend id="l1">Enter Your Preferences</legend>
+      <div id="error-message" style="color: red;"></div>
+
+      <label>Pet Type:</label>
+      <label><input type="radio" id="radio1" name="petType" value="Dog"> Dog</label> 
+      <label><input type="radio" id="radio2" name="petType" value="Cat"> Cat</label> 
+      <br><br>
+
+      <table>
+        <tr>
+          <td>
+            <label>Breed:</label>
+            <input type="text" id="breed" name="breed"><br><br>
+          </td>
+          <td>
+            <label><input type="radio" id="radio3" name="breed" value="dm"> Doesn't Matter</label>
+          </td>
+        </tr>
+      </table>
+
+      <label>Preferred Age of Animal:</label>
+      <select name="age" id="age"> 
+        <option value="0-6 months">0-6 months</option>
+        <option value="7-12 months">7-12 months</option>
+        <option value="1-2 years">1-2 years</option>
+        <option value="3-4 years">3-4 years</option>
+        <option value="5-6 years">5-6 years</option>
+        <option value="7-8 years">7-8 years</option>
+        <option value="9-10 years">9-10 years</option>
+        <option value="10-11 years">10-11 years</option>
+        <option value="11-12 years">11-12 years</option>
+        <option value="More than 12 years">More than 12 years</option>
+        <option value="Doesn't Matter">Doesn't Matter</option>
+      </select> 
+      <br><br>
+
+      <label>Gender:</label>
+      <label><input type="radio" id="radio4" name="gender" value="Male"> Male</label> 
+      <label><input type="radio" id="radio5" name="gender" value="Female"> Female</label> 
+      <label><input type="radio" id="radio6" name="gender" value="Doesn't Matter"> Doesn't Matter</label> 
+      <br><br>
+
+      <label>Needs to get along with:</label>
+      <label><input name="getalong" value="otherdogs" type="checkbox" id="otherdogs">Other Dogs</label>
+      <label><input name="getalong" value="othercats" type="checkbox" id="othercats">Other Cats</label>
+      <label><input name="getalong" value="smallchildren" type="checkbox" id="smallchildren">Small Children</label>
+      <br><br>
+
+      <input type="submit" name="submit" id="submit" value="Submit">
+      <input type="reset" name="reset" id="reset">
+    </fieldset>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

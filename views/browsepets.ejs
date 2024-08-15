@@ -1,0 +1,55 @@
+<%- include('partials/header', { title: 'Browse Available Pets' }) %>
+
+<div class="bodybrowsepets">
+<nav class="navbar">
+    <ul class="navelements">
+      <li><a href="/">Home</a></li>
+      <li><a href="/browsepets">Browse Available Pets</a></li>
+      <li><a href="/find">Find a Dog/Cat</a></li>
+      <li><a href="/dogcare">Dog Care</a></li>
+      <li><a href="/catcare">Cat Care</a></li>
+      <li><a href="/petstogiveaway">Have a Pet to Give Away</a></li>
+      <li><a href="/contactus">Contact Us</a></li>
+      <li><a class="active" href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+    </ul>
+  </nav>
+
+<main class="pets-list">
+    <h2>Available Pets</h2>
+
+    <div class="pet-item">
+        <img src="Images/dog-img.jpeg" alt="Rottweiler" id="rottweiler"><br>
+        <a href="https://www.reddit.com/r/Rottweiler/comments/svttjg/vet_called_him_an_80lb_block_of_muscle_hes/">Picture Source</a>
+        <div class="pet-info">
+            <h3>Cody</h3>
+            <p><strong>Type:</strong> Dog</p>
+            <p><strong>Breed:</strong> Rottweiler</p>
+            <p><strong>Age:</strong> 4 years</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Gets along with:</strong> Other Dogs, Other Cats, Small Children</p>
+            <p><strong>Description:</strong> Cody is a curious dog that loves going on nature walks and greeting strangers!</p>
+            <button class="interested">Interested</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="pet-item">
+        <img src="Images/cat-img.jpeg" alt="Shorthair cat" id="shorthair"><br>
+        <a href="https://www.aspcapetinsurance.com/resources/domestic-shorthair-cat-facts/">Picture Source</a>
+        <div class="pet-info">
+            <h3>Ella</h3>
+            <p><strong>Type:</strong> Cat</p>
+            <p><strong>Breed:</strong> American Shorthair</p>
+            <p><strong>Age:</strong> 5 years</p>
+            <p><strong>Gender:</strong> Female</p>
+            <p><strong>Gets along with:</strong> Small children</p>
+            <p><strong>Description:</strong> Ella is a shy cat that prefers staying indoors and climbing on top of things in the house.</p>
+            <button class="interested">Interested</button>
+        </div>
+    </div>
+</main>
+</div>
+
+<%- include('partials/footer') %>

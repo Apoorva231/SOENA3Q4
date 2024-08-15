@@ -1,0 +1,78 @@
+<%- include('partials/header', { title: 'Have a Pet to Give Away' }) %>
+
+<div class="bodygiveaway">
+  <nav class="navbar">
+    <ul class="navelements">
+      <li><a href="/">Home</a></li>
+      <li><a href="/browsepets">Browse Available Pets</a></li>
+      <li><a href="/find">Find a Dog/Cat</a></li>
+      <li><a href="/dogcare">Dog Care</a></li>
+      <li><a href="/catcare">Cat Care</a></li>
+      <li><a href="/petstogiveaway">Have a Pet to Give Away</a></li>
+      <li><a href="/contactus">Contact Us</a></li>
+      <li><a class="active" href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <form action="/register_pet" method="POST" class="giveAwayForm" id="giveAwayForm" onsubmit="validateForm2(event)">
+    <fieldset id="fga1">
+      <legend id="lga1">Enter Your Animal's Details</legend>
+      <label>Pet Type:</label>
+      <label><input type="radio" id="radioga1" name="dog-cat" value="Dog" required> Dog</label> 
+      <label><input type="radio" id="radioga2" name="dog-cat" value="Cat" required> Cat</label> <br><br>
+
+      <table>
+        <tr>
+          <td>
+            <label>Breed:</label>
+            <input type="text" id="breedga" name="breed" required><br><br>
+          </td>
+          <td>
+            <label><input type="radio" id="radioga3" name="breed" value="dm"> Mixed</label>
+          </td>
+        </tr>
+      </table>
+
+      <label>Age of Animal:</label>
+      <select name="age" id="agega" required> 
+        <option>0-6 months</option>
+        <option>7-12 months</option>
+        <option>1-2 years</option>
+        <option>3-4 years</option>
+        <option>5-6 years</option>
+        <option>7-8 years</option>
+        <option>9-10 years</option>
+        <option>10-11 years</option>
+        <option>11-12 years</option>
+        <option>More than 12 years</option>
+      </select> <br><br>
+
+      <label>Gender:</label>
+      <label><input type="radio" id="radioga4" name="female-male" value="Male" required> Male</label> 
+      <label><input type="radio" id="radioga5" name="female-male" value="Female" required> Female</label> 
+      <br><br>
+
+      <label>Gets along with:</label>
+      <label><input name="getalong2" value="otherdogs" type="checkbox" id="otherdogsga"> Other Dogs</label>
+      <label><input name="getalong2" value="othercats" type="checkbox" id="othercatsga"> Other Cats</label>
+      <label><input name="getalong2" value="smallchildren" type="checkbox" id="smallchildrenga"> Small Children</label><br><br>
+
+      <textarea placeholder="Tell Us What Makes Your Pet Unique" id="uniquepara" name="notes"></textarea><br><br>
+
+      <label>First Name of Pet Owner:</label> 
+      <input type="text" id="fnamega" name="fnamega" required><br><br>
+      <label>Family Name of Pet Owner:</label>
+      <input type="text" id="lnamega" name="lnamega" required><br><br>
+
+      <label>Email:</label>
+      <input type="email" name="email" id="emailga" required><br><br>
+
+      <input type="submit" name="submit" id="submitga" value="Submit">
+      <input type="reset" name="reset" id="resetga">
+    </fieldset>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

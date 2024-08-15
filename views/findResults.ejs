@@ -1,0 +1,17 @@
+<%- include('partials/header', { title: title }) %>
+
+<div class="content">
+  <h2>Search Results</h2>
+
+  <% if (pets.length === 0) { %>
+    <p>No pets found matching your criteria.</p>
+  <% } else { %>
+    <ul>
+      <% pets.forEach(pet => { %>
+        <li><%= pet %></li>
+      <% }); %>
+    </ul>
+  <% } %>
+</div>
+
+<%- include('partials/footer') %>

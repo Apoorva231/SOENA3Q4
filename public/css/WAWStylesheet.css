@@ -1,0 +1,421 @@
+
+body{
+    margin:0;
+    font-family: cursive;
+    background-color: #FBE9D0;
+    }
+    .logo img{
+        width: 160px;
+        height: 120px;
+    }
+    .header{
+        padding: 10px;
+        display: flex;
+        background-color: #E64833;
+        justify-content: center;
+        padding: 0px 10px;
+        margin:0;
+        height:auto;
+        width: auto;
+    }
+    .title{
+        display: none;
+        font-size: 40px;
+        margin: 0;
+    }
+    .title2{
+        display: block;
+        font-size: 40px;
+        margin: 0;
+    }
+    .navbar{
+        width:auto;
+        text-decoration: none;
+        list-style-type: none;
+        padding: 0;
+    }
+    .navelements{
+        text-decoration: none;
+        list-style-type: none;
+        background:#874f41;
+        padding: 10px;;
+        margin: 10px;;
+        font-size: medium;
+        border: 1px solid black;
+    
+    }
+    li a{
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        color: black;
+        font-weight: bold;
+        
+    
+    }
+    
+    li a.home {
+        background-color:green;
+        color: white;
+      }
+      
+      li a:hover {
+        background-color:peru;
+        color: white;
+      }
+    
+      .footer{
+        padding: 10px;
+        display: block;
+        text-align: center;
+        background-color: rgb(223, 109, 77);
+        justify-content: center;
+        padding: 5px ;
+        margin:0px;
+        height:auto;
+        width: auto;
+      }
+      .main{
+        display: flex;    
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+      }
+      .image-container img{
+        object-fit: contain;
+        display: block;
+      }
+      .text-container{
+        display: block;
+      }
+      .findform{
+        margin: 10px;
+      }
+      .giveAwayForm{
+        margin:10px
+      }
+      .contactus{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
+        margin: 10px;
+        width: 100%;
+      }
+      .cul{
+        text-align: center;
+      }
+      .cattips{
+        text-align: center;
+      }
+      .dogtips{
+        text-align: center;
+      }
+      #date-time{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+      }
+      .time{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: right;
+      }
+      .pets-list{
+        margin: 10px;
+        text-align: center;
+      }
+      #rottweiler{
+        width: 100%;
+      }
+      #shorthair{
+        width: 100%;
+      }
+      #dogkitten{
+        width: 100%;
+      }
+    
+      
+    
+      @media only screen and (min-width: 600px) {
+        body {
+                background-color: #FBE9D0;
+        }
+        
+        .title{
+            display:block;
+            font-size: 40px;
+            margin: 0;
+        }
+        .title2{
+            display: none;
+            font-size: 40px;
+            margin: 0;
+        }
+        .navbar{
+            width: 15%;
+            text-decoration: none;
+            list-style-type: none;
+            margin-top: 10px;
+            padding: 0;
+            overflow: hidden;
+            
+            
+        }
+        .navelements{
+            text-decoration: none;
+            list-style-type: none;
+            background:#874f41;
+            padding:0;
+            margin:0;
+            font-size: medium;
+            
+           
+        
+        }
+        li a{
+            text-decoration: none;
+            display: block;
+            padding: 10% ;
+            margin: 10px;
+            text-align: left;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            border: 1px solid lightgoldenrodyellow;
+        
+        }
+        .main{
+          text-align: left;
+          margin: 10px
+        }
+        .cattips{
+            text-align: left;
+            margin: 10px
+          }
+          .dogtips{
+            
+            margin: 10px;
+            text-align: left;
+          }
+          .bodyindex{
+            display: flex;
+            flex-direction: row;
+          }
+          .bodybrowsepets{
+            display: flex;
+            flex-direction: row;
+          }
+          .bodyfind{
+            display: flex;
+            flex-direction: row;
+          }
+          .bodygiveaway{
+            display: flex;
+            flex-direction: row;
+          }
+          .bodycontactus{
+            display: flex;
+            flex-direction: row;
+          }
+          .bodydogcare{
+            display: flex;
+            flex-direction: row;
+          }
+          .bodycatcare{
+            display: flex;
+            flex-direction: row;
+          }
+          .loginbody{
+            display: flex;
+            flex-direction: row;
+          }
+          .registerbody{
+            display: flex;
+            flex-direction: row;
+          }
+          #navbar{
+            width: 35%;
+          }
+          #navbar1{
+            width:75%
+          }
+          .bodyprivacy{
+            display: flex;
+            flex-direction: row;
+          }
+          .privacytext{
+            margin:10px;
+            display: block
+          }
+          #navbarprivacy{
+            width: 50%;
+          }
+          .findform{
+            margin: 10px;
+            width: 100%
+          }
+          .giveAwayForm{
+            width: 100%;
+            margin:10px
+          }
+          .pets-list{
+            margin: 10px;
+            text-align: left;
+          }
+          #rottweiler{
+            width: 50%;
+          }
+          #shorthair{
+            width: 50%;
+          }
+          #dogkitten{
+            width: 70%;
+          }
+          .pet-item{
+            display: flex;
+            flex-direction: row;
+          }
+          
+    
+      }
+    
+       @media only screen and (min-width: 1024px) {
+        body {
+            background-color: #FBE9D0;
+    }
+    
+    .title{
+        display:block;
+        font-size: 40px;
+        margin: 0;
+    }
+    .title2{
+        display: none;
+        font-size: 40px;
+        margin: 0;
+    }
+    .navbar{
+        width: 15%;
+        text-decoration: none;
+        list-style-type: none;
+        margin-top: 10px;
+        padding: 0;
+        overflow: hidden;
+    }
+    .navelements{
+        text-decoration: none;
+        list-style-type: none;
+        background:#874f41;
+        padding:0;
+        margin:0;
+        font-size: medium;
+       
+    
+    }
+    li a{
+        text-decoration: none;
+        display: block;
+        padding: 10% ;
+        margin: 10px;
+        text-align: left;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        border: 1px solid lightgoldenrodyellow;
+    
+    }
+    .cattips{
+        text-align: left;
+        margin: 10px
+      }
+      .dogtips{
+        
+        margin: 10px;
+        text-align: left;
+      }
+      .bodyindex{
+        display: flex;
+        flex-direction: row;
+      }
+      .bodybrowsepets{
+        display: flex;
+        flex-direction: row;
+      }
+      .bodyfind{
+        display: flex;
+        flex-direction: row;
+      }
+      .bodygiveaway{
+        display: flex;
+        flex-direction: row;
+      }
+      .bodycontactus{
+        display: flex;
+        flex-direction: row;
+      }
+      .bodydogcare{
+        display: flex;
+        flex-direction: row;
+      }
+      .bodycatcare{
+        display: flex;
+        flex-direction: row;
+      }
+      .loginbody{
+        display: flex;
+        flex-direction: row;
+      }
+      .registerbody{
+        display: flex;
+        flex-direction: row;
+      }
+      #navbar{
+        width: 35%;
+      }
+      #navbar1{
+        width:75%
+      }
+      .bodyprivacy{
+        display: flex;
+        flex-direction: row;
+      }
+      .privacytext{
+        margin:10px;
+        display: block
+      }
+      #navbarprivacy{
+        width: 50%;
+      }
+      .findform{
+        margin: 10px;
+        width: 100%
+      }
+      .giveAwayForm{
+        width: 100%;
+        margin:10px
+      }
+      .main{
+        width: 100%;
+        margin: 10px;
+        display: block;
+      }
+      .pets-list{
+        margin: 10px;
+        text-align: left;
+      }
+      #rottweiler{
+        width: 50%;
+      }
+      #shorthair{
+        width: 50%;
+      }
+      #dogkitten{
+        width: 70%;
+      }
+      
+       }
